@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  ghost:
+    image: ghost:2.3.0
+    restart: always
+    ports:
+      - '3001:2368'
+    volumes:
+      - './content:/var/lib/ghost/content'
+    environment:
+      NODE_ENV: development
